@@ -15,7 +15,7 @@ def home(request):
 
 def index(request):
 
-    dest = Destination.objects.all()
+    dest = Destination.objects.all().order_by("id")
 
     return render(request,"index.html",{"dest":dest})
 
