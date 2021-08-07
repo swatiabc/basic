@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+{% block content %}
+
+{% for dest1 in dest %}
+<hr>
+ID : {{dest1.id}} <br>
+NAME : {{dest1.name}} <br>
+DESC : {{dest1.desc}} <br>
+PRICE : {{dest1.price}} <br>
+
+{% if dest1.flag %}
+OFFER AVAILABLE <br>
+{% endif %}
+
+<img src = "{{dest1.img.url}}">
+<hr>
+{% endfor %}
+<br>
+<a href="user/register">Register</a>
+{% endblock %}

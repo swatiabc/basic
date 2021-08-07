@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello world {{name}}!!!!</h1>
+
+<form action="add" method="post">
+    {%csrf_token%}
+    Enter 1st number : <input types="text" name="num1"><br>
+    Enter 2st number : <input types="text" name="num2"><br>
+    <input type="submit">
+</form>
+
+{% if user.is_authenticated %}
+Hello, {{user.first_name}} <br>
+<a href="user/logout">Logout</a><br>
+{% else %}
+<a href="user/register">Register</a><br>
+<a href="user/login">Login</a>
+{%endif%}
+{% endblock %}
