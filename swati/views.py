@@ -10,11 +10,8 @@ def home(request):
     form = DestinationForm(request.POST or None, request.FILES or None )
     if form.is_valid():
         form.save()
+        return redirect("index")
     return render(request,'home.html',{"form":form})
-
-def add(request):
-    
-    return render(request,'result.html')
 
 def index(request):
 

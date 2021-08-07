@@ -9,11 +9,4 @@
     <input type="submit">
 </form>
 
-{% if user.is_authenticated %}
-Hello, {{user.first_name}} <br>
-<a href="user/logout">Logout</a><br>
-{% else %}
-<a href="user/register">Register</a><br>
-<a href="user/login">Login</a>
-{%endif%}
 {% endblock %}
