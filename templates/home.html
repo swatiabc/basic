@@ -3,10 +3,9 @@
 {% block content %}
 <h1>Hello world {{name}}!!!!</h1>
 
-<form action="add" method="post">
+<form method="post" enctype="multipart/form-data">
     {%csrf_token%}
-    Enter 1st number : <input types="text" name="num1"><br>
-    Enter 2st number : <input types="text" name="num2"><br>
+    {{form.as_p}}
     <input type="submit">
 </form>
 

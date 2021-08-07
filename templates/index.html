@@ -14,7 +14,10 @@ PRICE : {{dest1.price}} <br>
 OFFER AVAILABLE <br>
 {% endif %}
 
-<img src = "{{dest1.img.url}}">
+<a href="/edit/{{dest1.id}}">Edit</a><br>
+<a href="/remove/{{dest1.id}}">Delete</a><br>
+
+<!-- <img src = "{{dest1.img.url}}"> -->
 <hr>
 {% endfor %}
 <br>
